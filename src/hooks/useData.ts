@@ -29,7 +29,7 @@ const useData = <T>(endpoint: string, requestConfig?: AxiosRequestConfig) => {
             });
 
         return () => controller.abort();
-    }, [endpoint]);
+    }, [endpoint, requestConfig]);
 
     return {data, error, isLoading};
 }
